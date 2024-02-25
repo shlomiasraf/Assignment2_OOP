@@ -19,10 +19,9 @@ class Post():
                 print("notification to " + self.__user.get_username() + ": " + user2.get_username()  + " commented on your post: " + theComment)
                 self.get_user().notify(user2.get_username()  + " commented on your post")
     def display(self):
-        # imageLoc = image.imread(self.description)
-        # imageData = image.pil_to_array(imageLoc)
-        # plt.imshow(imageData)
-        # plt.title('Loaded Image')
+        image1 = image.imread(self.get_description())
+        plt.imshow(image1)
+        plt.title('Loaded Image')
         print("Shows picture")
         plt.show()
         ...
